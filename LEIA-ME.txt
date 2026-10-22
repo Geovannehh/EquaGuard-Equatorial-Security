@@ -1,0 +1,1 @@
+Para iniciar no Windows, instale Python 3.10 ou superior e abra INICIAR_EQUAGUARD.cmd. O inicializador instala Flask, inicia o servidor e abre o navegador. Requer internet na primeira instalação e para o jogo externo. Fontes e licenças incluídas. Banco e sessão são criados localmente; dados pessoais e segredos não acompanham o pacote.

@@ -1,0 +1,22 @@
+/* Identidade da plataforma de referência: Special Elite + Karla. */
+:root {
+ --bg:#101c2b; --surface:#1b2d44; --surface2:#213750; --line:#3a5878;
+ --text:#eef1f5; --muted:#a9b8c9; --cyan:#f5c242; --blue:#f5c242;
+ --purple:#f5c242; --amber:#f5c242;
+ --font-body:'Karla',system-ui,sans-serif;
+ --font-heading:'Special Elite','Courier New',monospace;
+ font-family:var(--font-body);
+}
+body, body.home-view { background-color:var(--bg); color:var(--text); font-family:var(--font-body); background-image:radial-gradient(ellipse at 50% 0%,#1b2d44,#101c2b 70%); }
+h1,h2,h3,h4,h5,h6,.orbital-hero h1 { font-family:var(--font-heading); font-weight:400; letter-spacing:.01em; }
+button,input,select,textarea { font-family:var(--font-body); }
+.sidebar,.topbar,.orbital-account-menu { background:#101c2b; }
+.content-card,.stat,.team-card,.presentation-shield,.presentation-features > a { background:#213750; border-color:#3a5878; }
+.button.primary,.home-view .orbital-cta,.home-view .orbital-mark,.orbital-mark { background:#f5c242; color:#101c2b; border-color:#f5c242; box-shadow:0 3px 0 #b98d1c; }
+.button.primary:hover { background:#f5c242; filter:brightness(1.06); }
+.cyan,.orbital-brand span,.home-view .orbital-brand span,.home-view .orbital-hero em,.presentation-hero h1 em,.presentation-features strong,.presentation-orbit .icon { color:#f5c242; }
+.sidebar nav a.active,.filter.active { color:#f5c242; background:#f5c24214; border-color:#f5c24255; }
+.presentation-orbit { border-color:#f5c24255; box-shadow:0 0 50px #f5c24210; }
+.orbital-halo { border-color:#3a5878; }
+.interactive-game-card { background:#1b2d44; border-color:#3a5878; }
+.presentation-hero h1 { line-height:1.25; }

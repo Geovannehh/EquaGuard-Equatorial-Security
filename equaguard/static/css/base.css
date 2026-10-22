@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+:root {
+    color-scheme: dark;
+    --bg: #1b2d44;
+    --surface: #213750;
+    --surface2: #213750;
+    --line: #3a5878;
+    --text: #f6f7fb;
+    --muted: #c4c8e8;
+    --cyan: #f5c242;
+    --blue: #f5c242;
+    --green: #f5c242;
+    --amber: #f5c36d;
+    --radius: 18px;
+    --font-body: Inter, "Segoe UI", Arial, sans-serif;
+    --font-heading: "Space Grotesk", Inter, "Segoe UI", sans-serif;
+    font-family: var(--font-body);
+    font-synthesis: none
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6
+}
+
+button,
+input,
+select {
+    font: inherit
+}
+
+button,
+a,
+input,
+select {
+    -webkit-tap-highlight-color: transparent
+}
+
+button,
+a {
+    touch-action: manipulation
+}
+
+button {
+    cursor: pointer
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: .55
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+main:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 4px
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.22;
+    letter-spacing: -.035em
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 14px
+}
+
+h2 {
+    font-size: 24px
+}
+
+h3 {
+    font-size: 18px
+}
+
+p {
+    color: var(--muted)
+}
+
+svg.icon {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0
+}
+
+.cyan {
+    color: var(--cyan)
+}
+
+.skip {
+    position: fixed;
+    top: -80px;
+    left: 20px;
+    z-index: 20;
+    background: var(--blue);
+    padding: 10px
+}
+
+.skip:focus {
+    top: 10px
+}
+
+
+/* Títulos com identidade própria; leitura e controles usam Inter. */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+}
+
+:root { --purple: #f5c242; --cyan: #f5c242; --blue: #f5c242; }
+.orbital-mark, .button.primary { background: linear-gradient(115deg, #f5c242, #f5c242); }
+.orbital-brand span, .cyan { color: var(--cyan); }

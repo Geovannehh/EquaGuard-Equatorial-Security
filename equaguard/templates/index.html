@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="EquaGuard: uma jornada de aprendizagem em cibersegurança para colaboradores. Aprenda, pratique e proteja.">
+        <meta name="theme-color" content="#101c2b">
+        <title>
+            EquaGuard • Sua jornada de proteção
+        </title>
+        <link rel="icon" href="{{ url_for('static', filename='img/shield.svg') }}" type="image/svg+xml">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/fonts.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css', v='theme-solo1') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/escape.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/presentation.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/reference-theme.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/menu-profiles.css') }}">
+        <script type="module" src="{{ url_for('static', filename='js/app.js', v='theme-solo1') }}">
+        </script>
+    </head>
+    <body>
+        <a class="skip" href="#content">
+            Pular para o conteúdo
+        </a>
+        {% include 'partials/navigation.html' %}
+        <div class="app-shell">
+            <header class="topbar">
+                <div class="breadcrumb">
+                    EquaGuard
+                    <span>
+                        /
+                    </span>
+                    <strong id="page-label">
+                        Minha jornada
+                    </strong>
+                </div>
+                <div class="top-actions">
+                    <span class="environment">
+                        <i>
+                        </i>
+                        Ambiente de aprendizagem
+                    </span>
+                    <button id="profile-button" class="profile-button" type="button" aria-label="Trocar perfil de demonstração">
+                        <span class="avatar" id="avatar">
+                            EG
+                        </span>
+                        <span id="profile-name">
+                            Entrar no demo
+                        </span>
+                        <span>
+                            ⌄
+                        </span>
+                    </button>
+                </div>
+            </header>
+            <main id="content" tabindex="-1">
+                <div class="loading">
+                    Preparando sua jornada…
+                </div>
+            </main>
+            <footer>
+                <span>
+                    EquaGuard
+                    <b>
+                        •
+                    </b>
+                    Tecnologia que ensina, pessoas que protegem
+                </span>
+                <span>
+                    MVP educacional · Equipe 237
+                </span>
+            </footer>
+        </div>
+        {% include 'partials/dialogs.html' %}
+        <div id="toast" role="status" aria-live="polite" hidden>
+        </div>
+        <noscript>
+            <p>
+                Ative o JavaScript no navegador para usar as atividades interativas.
+            </p>
+        </noscript>
+    </body>
+</html>

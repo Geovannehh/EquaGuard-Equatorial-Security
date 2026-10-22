@@ -1,0 +1,409 @@
+@media(min-width:1500px) {
+    .hero {
+        min-height: 330px
+    }
+
+    .hero h2 {
+        font-size: 43px
+    }
+
+    .hero p:not(.eyebrow) {
+        font-size: 14px
+    }
+
+    .shield-scene>img {
+        width: 135px;
+        height: 160px
+    }
+
+    .orbit {
+        width: 250px;
+        height: 250px
+    }
+
+    .floating-chip.one {
+        right: 40px
+    }
+
+    .floating-chip.two {
+        left: 40px
+    }
+}
+
+@media(max-width:1150px) {
+    .sidebar {
+        width: 212px;
+        padding: 28px 14px
+    }
+
+    .brand {
+        font-size: 23px
+    }
+
+    .app-shell {
+        margin-left: 212px
+    }
+
+    main {
+        padding: 26px
+    }
+
+    .topbar {
+        padding: 0 26px
+    }
+
+    .environment {
+        display: none
+    }
+
+    .hero {
+        padding: 26px
+    }
+
+    .hero h2 {
+        font-size: 29px
+    }
+
+    .floating-chip {
+        font-size: 8px;
+        padding: 7px
+    }
+
+    .cards {
+        gap: 12px
+    }
+
+    .content-card {
+        padding: 18px
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1.4fr 1fr
+    }
+
+    .stat {
+        padding: 14px
+    }
+
+    .stat>.icon {
+        display: none
+    }
+
+    .stat-label {
+        font-size: 10px
+    }
+
+    .stat strong {
+        font-size: 24px
+    }
+
+    .journey-list {
+        padding: 8px 14px
+    }
+
+    .journey-row {
+        gap: 10px
+    }
+}
+
+@media(max-width:850px) {
+    .sidebar {
+        position: static;
+        width: auto;
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--line);
+        border-right: 0
+    }
+
+    .sidebar .brand {
+        font-size: 22px
+    }
+
+    .brand img {
+        width: 30px;
+        height: 35px
+    }
+
+    .brand small {
+        font-size: 6px
+    }
+
+    .workspace-label,
+    .sidebar-bottom,
+    .nav-divider {
+        display: none
+    }
+
+    .sidebar nav {
+        display: flex;
+        overflow-x: auto;
+        gap: 5px;
+        margin-top: 15px
+    }
+
+    .sidebar nav a {
+        white-space: nowrap;
+        gap: 7px;
+        font-size: 11px;
+        padding: 9px;
+        margin: 0
+    }
+
+    .sidebar nav a.active {
+        padding: 8px
+    }
+
+    .sidebar nav a small {
+        display: none
+    }
+
+    .sidebar nav .icon {
+        width: 16px;
+        height: 16px
+    }
+
+    .app-shell {
+        margin-left: 0
+    }
+
+    .topbar {
+        height: 60px;
+        padding: 0 20px
+    }
+
+    .top-actions {
+        gap: 10px
+    }
+
+    main {
+        padding: 24px 20px
+    }
+
+    .hero {
+        grid-template-columns: 1.4fr 1fr
+    }
+
+    .hero h2 {
+        font-size: 29px
+    }
+
+    .orbit {
+        width: 160px;
+        height: 160px
+    }
+
+    .shield-scene>img {
+        width: 90px;
+        height: 110px
+    }
+
+    .floating-chip.one {
+        right: -5px
+    }
+
+    .floating-chip.two {
+        left: -10px
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1.5fr 1fr
+    }
+
+    .date-chip {
+        display: none
+    }
+
+    .badge-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .chat-layout {
+        grid-template-columns: 1fr
+    }
+
+    footer {
+        padding: 18px 20px
+    }
+}
+
+@media(max-width:580px) {
+    main {
+        padding: 22px 16px
+    }
+
+    .topbar {
+        padding: 0 16px
+    }
+
+    .breadcrumb {
+        font-size: 10px
+    }
+
+    .profile-button {
+        font-size: 10px
+    }
+
+    .profile-button .avatar {
+        width: 28px;
+        height: 28px
+    }
+
+    .page-heading h1 {
+        font-size: 25px
+    }
+
+    .page-heading {
+        align-items: flex-start
+    }
+
+    .hero {
+        display: block;
+        padding: 25px 22px
+    }
+
+    .hero h2 {
+        font-size: 31px
+    }
+
+    .hero p:not(.eyebrow) {
+        font-size: 12px;
+        max-width: 95%
+    }
+
+    .shield-scene {
+        display: none
+    }
+
+    .stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 25px
+    }
+
+    .stat strong {
+        font-size: 26px
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr
+    }
+
+    .cards {
+        grid-template-columns: 1fr
+    }
+
+    .content-card {
+        padding: 23px
+    }
+
+    .content-card .card-icon {
+        margin-bottom: 14px
+    }
+
+    .badge-grid {
+        gap: 10px
+    }
+
+    .badge-card {
+        padding: 22px 12px
+    }
+
+    .badge-card h3 {
+        font-size: 14px
+    }
+
+    .journey-row .button {
+        max-width: 87px
+    }
+
+    .journey-row h3 {
+        font-size: 12px
+    }
+
+    .journey-row p {
+        font-size: 10px
+    }
+
+    .page-heading .chip {
+        font-size: 8px
+    }
+
+    .section-title h2 {
+        font-size: 17px
+    }
+
+    .chat form {
+        padding: 12px
+    }
+
+    .chat form .button {
+        padding: 9px
+    }
+
+    .messages {
+        height: 340px;
+        padding: 15px
+    }
+
+    .message {
+        max-width: 95%
+    }
+
+    footer {
+        display: block;
+        font-size: 8px
+    }
+
+    footer>span {
+        display: block;
+        margin-bottom: 4px
+    }
+
+    #login-dialog {
+        padding: 24px
+    }
+
+    .login-panel h1 {
+        font-size: 29px
+    }
+
+    .login-brand {
+        margin-bottom: 20px
+    }
+
+    dialog {
+        padding: 22px
+    }
+
+    .history-row {
+        font-size: 11px
+    }
+
+    .notice {
+        font-size: 11px
+    }
+}
+
+@media(prefers-reduced-motion:no-preference) {
+
+    .content-card,
+    .button,
+    .choice {
+        transition: border-color .18s, filter .18s
+    }
+
+    .shield-scene>img {
+        animation: float 6s ease-in-out infinite
+    }
+
+    @keyframes float {
+        50% {
+            transform: translateY(-9px) rotate(-3deg)
+        }
+    }
+}
+

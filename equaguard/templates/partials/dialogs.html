@@ -1,0 +1,86 @@
+<dialog id="login-dialog" aria-labelledby="login-title">
+    <div class="login-panel">
+        <div class="login-brand">
+            <img src="{{ url_for('static', filename='img/shield.svg') }}" alt="" width="48" height="52">
+            <span>
+                EquaGuard
+            </span>
+        </div>
+        <p class="eyebrow">
+            SUA PRÓXIMA DECISÃO FAZ A DIFERENÇA
+        </p>
+        <h1 id="login-title">
+            A proteção começa
+            <br>
+            com você
+        </h1>
+        <p>
+            Entre com um personagem fictício e experimente sua jornada de cibersegurança.
+        </p>
+        <form id="login-form">
+            <fieldset>
+                <legend>
+                    Clique nos personagens do jogo interativo
+                </legend>
+                <label class="persona character-card">
+                    <input type="radio" name="profile" value="maria" checked>
+                    <img class="character-photo" src="{{ url_for('static', filename='img/characters/foto-1.jpg') }}" alt="" width="72" height="72">
+                    <span class="character-copy"><strong>Maria</strong><small>Analista</small><span>Atendimento e rotinas administrativas</span></span>
+                    <span class="character-check" aria-hidden="true">✓</span>
+                </label>
+                <label class="persona character-card">
+                    <input type="radio" name="profile" value="pedro" >
+                    <img class="character-photo" src="{{ url_for('static', filename='img/characters/foto-2.jpg') }}" alt="" width="72" height="72">
+                    <span class="character-copy"><strong>Pedro</strong><small>Liderança</small><span>Prioridades, acessos e decisões da equipe</span></span>
+                    <span class="character-check" aria-hidden="true">✓</span>
+                </label>
+                <label class="persona character-card">
+                    <input type="radio" name="profile" value="flavio" >
+                    <img class="character-photo" src="{{ url_for('static', filename='img/characters/foto-3.jpg') }}" alt="" width="72" height="72">
+                    <span class="character-copy"><strong>Flávio</strong><small>TI</small><span>Suporte, infraestrutura e proteção dos sistemas</span></span>
+                    <span class="character-check" aria-hidden="true">✓</span>
+                </label>
+                <label class="persona character-card">
+                    <input type="radio" name="profile" value="carlos" >
+                    <img class="character-photo" src="{{ url_for('static', filename='img/characters/tecnico.jpeg') }}" alt="" width="72" height="72">
+                    <span class="character-copy"><strong>Carlos</strong><small>Técnico de campo</small><span>Equipamentos, subestações e rede operacional</span></span>
+                    <span class="character-check" aria-hidden="true">✓</span>
+                </label>
+            </fieldset>
+            <label class="role-label" for="demo-role">
+                Modo de demonstração
+            </label>
+            <select id="demo-role" name="role">
+                <option value="learner">
+                    Colaborador — minha aprendizagem
+                </option>
+                <option value="manager">
+                    Gestão — indicadores agregados
+                </option>
+            </select>
+            <button class="button primary wide" type="submit">
+                Entrar na jornada
+                <span>
+                    →
+                </span>
+            </button>
+            <p id="login-error" class="error" role="alert">
+            </p>
+        </form>
+        <p class="fineprint">
+            Acesso demo, sem senha corporativa. Os perfis e cenários são fictícios. Seu progresso é salvo neste ambiente.
+        </p>
+    </div>
+</dialog>
+<dialog id="activity-dialog" aria-labelledby="activity-title">
+    <div class="dialog-top">
+        <span class="eyebrow" id="activity-type">
+            ATIVIDADE
+        </span>
+        <button class="icon-button" id="close-activity" aria-label="Fechar atividade" type="button">
+            ×
+        </button>
+    </div>
+    <div id="activity-content">
+    </div>
+</dialog>

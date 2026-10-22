@@ -1,0 +1,39 @@
+
+/* Abertura Orbital preservada como na referência enviada. */
+body.home-view { background: #101c2b; }
+.home-view .orbital-mark { background: linear-gradient(135deg, #f5c242, #f5c242); }
+.home-view .orbital-cta { background: #f5c242; }
+.home-view .orbital-brand span, .home-view .orbital-hero em { color: #f5c242; }
+.equaguard-presentation { max-width: 1280px; margin: auto; }
+.presentation-hero { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 64px; padding: 80px 0; }
+.presentation-hero h1 { font-size: clamp(36px,4.5vw,64px); max-width: 740px; letter-spacing: -.045em; }
+.presentation-hero h1 em { font-style: normal; color: #f5c242; }
+.presentation-hero > div > p:not(.eyebrow) { font-size: 16px; line-height: 1.8; max-width: 62ch; }
+.presentation-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.presentation-shield { border: 1px solid #213750; border-radius: 24px; background: radial-gradient(circle at 50% 35%,#3a587866,transparent 65%),linear-gradient(140deg,#1b2d44,#1b2d44); padding: 32px; }
+.presentation-orbit { width: 220px; height: 220px; border: 1px solid #f5c24244; border-radius: 50%; display: grid; place-items: center; margin: 40px auto; box-shadow: 0 0 70px #f5c24222, inset 0 0 50px #f5c24211; }
+.presentation-orbit .icon { width: 92px; height: 92px; color: #f5c242; stroke-width: 1.2; }
+.presentation-facts { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.presentation-facts small { display: block; color: #a9b8c9; font-size: 9px; letter-spacing: 1px; margin-bottom: 8px; }
+.presentation-facts strong { font-size: 12px; line-height: 1.4; display: block; }
+.presentation-section { border-top: 1px solid var(--line); padding: 48px 0; }
+.presentation-features { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 32px; }
+.presentation-features > a { padding: 28px; border: 1px solid #1b2d44; background: #101c2b; border-radius: 16px; }
+.presentation-features > a:hover { border-color: #f5c242; }
+.presentation-features span { color: #f5c242; font-size: 12px; }
+.presentation-features h3 { margin-top: 20px; }
+.presentation-features p { font-size: 14px; }
+.presentation-features strong { color: #f5c242; font-size: 12px; }
+.presentation-support { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 40px 0; border-top: 1px solid var(--line); }
+@media(max-width:850px) { .presentation-hero { grid-template-columns: 1fr; gap: 32px; padding: 48px 0; } .presentation-features { grid-template-columns: 1fr; } .presentation-support { flex-direction: column; align-items: start; } .equaguard-presentation .orbital-header { flex-wrap: wrap; padding: 16px 0; gap: 16px; } }
+@media(max-width:450px) { .presentation-shield { padding: 20px; } .presentation-orbit { width: 180px; height: 180px; } }
+
+/* Evita que o halo decorativo crie rolagem horizontal em celulares. */
+.orbital-hero { overflow: clip; }
+.presentation-hero > *, .presentation-facts > * { min-width: 0; }
+.presentation-facts strong { overflow-wrap: anywhere; }
+@media(max-width:580px) {
+    .equaguard-presentation .orbital-header > .button { max-width: 55%; font-size: 11px; padding: 9px 10px; }
+    .presentation-hero h1 { font-size: clamp(32px, 9vw, 44px); }
+    .presentation-actions .button { width: 100%; }
+}

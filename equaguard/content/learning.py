@@ -1,0 +1,401 @@
+"""Conteúdo educativo fictício do MVP EquaGuard. Não representa políticas internas."""
+
+PROFILES = {
+    "maria": {"name": "Maria", "team": "Analista", "initials": "MA", "photo": "img/characters/foto-1.jpg"},
+    "pedro": {"name": "Pedro", "team": "Liderança", "initials": "PE", "photo": "img/characters/foto-2.jpg"},
+    "flavio": {"name": "Flávio", "team": "TI", "initials": "FL", "photo": "img/characters/foto-3.jpg"},
+    "carlos": {"name": "Carlos", "team": "Técnico de campo", "initials": "CA", "photo": "img/characters/tecnico.jpeg"},
+    "campo": {"name": "Alex", "team": "Operações em campo", "initials": "AL"},
+    "atendimento": {"name": "Bia", "team": "Atendimento", "initials": "BI"},
+    "corporativo": {"name": "Cris", "team": "Administrativo", "initials": "CR"},
+}
+
+LESSONS = [
+    {
+        "id": "phishing",
+        "title": "Nem todo e-mail merece um clique",
+        "topic": "Phishing",
+        "minutes": 3,
+        "icon": "mail",
+        "description": "Reconheça a urgência, confira o domínio e saiba quando reportar.",
+        "body": [
+            "Uma mensagem pede atualização urgente do seu acesso. Antes de agir, confira o endereço completo do remetente: um nome conhecido não comprova a identidade.",
+            "Pressão de tempo, domínio parecido e pedido de senha são sinais de alerta. O endereço suporte@equatorlal-ajuda.example deste exercício é fictício e usa uma troca de letras.",
+            "Não abra o link para conferir. Acesse o serviço por um endereço já conhecido e confirme a solicitação por um canal independente. Reporte a suspeita pelo canal oficial definido pela sua organização.",
+        ],
+        "question": "Uma mensagem ameaça bloquear seu acesso em 30 minutos. Qual é a melhor atitude?",
+        "choices": [
+            "Abrir o link para verificar",
+            "Conferir por um canal conhecido e reportar a suspeita",
+            "Encaminhar o link para toda a equipe",
+        ],
+        "answer": 1,
+        "feedback": "A verificação independente evita que o próprio contato fraudulento confirme a história. Reportar ajuda a equipe responsável a avaliar a ameaça.",
+    },
+    {
+        "id": "senhas",
+        "title": "Seu acesso é pessoal. Sua proteção também.",
+        "topic": "Senhas e MFA",
+        "minutes": 4,
+        "icon": "key",
+        "description": "Proteja senhas, códigos de acesso e pedidos de autenticação.",
+        "body": [
+            "Use senhas longas e exclusivas, com um gerenciador autorizado pela organização. Reutilizar a mesma senha permite que um vazamento afete outros acessos.",
+            "A autenticação multifator (MFA) acrescenta uma camada de proteção. Nunca compartilhe códigos temporários e não aprove uma notificação de acesso que você não iniciou.",
+            "Mesmo em uma tarefa urgente, não empreste sua conta. Se alguém precisa acessar um sistema, solicite a permissão apropriada pelo processo oficial.",
+        ],
+        "question": "Você recebe uma aprovação de MFA sem ter tentado entrar. O que fazer?",
+        "choices": [
+            "Aprovar para parar as notificações",
+            "Enviar o código ao colega",
+            "Recusar e comunicar pelo canal oficial",
+        ],
+        "answer": 2,
+        "feedback": "Uma aprovação inesperada pode indicar uma tentativa indevida de acesso. Recuse e procure o suporte pelo canal conhecido.",
+    },
+    {
+        "id": "social",
+        "title": "Confiança também precisa de confirmação",
+        "topic": "Engenharia social",
+        "minutes": 3,
+        "icon": "user",
+        "description": "Pratique a verificação de ordens de serviço e do suporte técnico.",
+        "body": [
+            "Um contato pode se apresentar como líder, fornecedor ou suporte. Conhecer nomes e detalhes do trabalho não comprova que a solicitação é legítima.",
+            "Uma ordem de serviço inesperada pede mudança de destino e uma lista de clientes. Interrompa o envio e confirme no sistema ou canal oficial já conhecido.",
+            "Não use o número ou link recebido na própria solicitação para validá-la. A confirmação precisa ser independente. Se houver suspeita, preserve as informações e reporte pelo fluxo interno.",
+        ],
+        "question": "Um suposto técnico pede seu código de autenticação pelo chat. Você deve…",
+        "choices": [
+            "Recusar e confirmar a identidade por canal independente",
+            "Passar o código se ele souber seu nome",
+            "Enviar apenas parte do código",
+        ],
+        "answer": 0,
+        "feedback": "Códigos de autenticação são pessoais. Identidade e autorização devem ser confirmadas por um contato oficial já conhecido.",
+    },
+    {
+        "id": "dados",
+        "title": "Dados protegidos em cada atendimento",
+        "topic": "Proteção de dados",
+        "minutes": 4,
+        "icon": "shield",
+        "description": "Compartilhe apenas o necessário, com destinatários autorizados.",
+        "body": [
+            "Dados de clientes e de colaboradores merecem cuidado. Antes de compartilhar, verifique a necessidade, a autorização do destinatário e o canal usado.",
+            "Revise destinatários e permissões de arquivos. Prefira os recursos corporativos aprovados; um link público pode ampliar o acesso além do pretendido.",
+            "Se um envio indevido acontecer, comunique rapidamente pelo fluxo oficial de incidentes. Não tente esconder o ocorrido. A equipe responsável orientará a contenção.",
+        ],
+        "question": "Você enviou um arquivo ao destinatário errado. Qual é o próximo passo?",
+        "choices": [
+            "Esperar para ver se alguém percebe",
+            "Reportar prontamente e seguir as orientações de contenção",
+            "Publicar o arquivo para todos terem a mesma informação",
+        ],
+        "answer": 1,
+        "feedback": "O reporte rápido permite avaliar o alcance e conter a exposição. Use o fluxo de incidentes definido pela organização.",
+    },
+    {
+        "id": "dispositivos",
+        "title": "Proteção que acompanha você em campo",
+        "topic": "Dispositivos e QR Code",
+        "minutes": 3,
+        "icon": "device",
+        "description": "Cuide dos equipamentos e desconfie de mídias e destinos desconhecidos.",
+        "body": [
+            "Bloqueie a tela ao se afastar e mantenha o equipamento atualizado pelos processos autorizados. Evite instalar aplicativos de origem desconhecida.",
+            "Um pendrive encontrado pode conter arquivos maliciosos. Não o conecte para descobrir o dono; encaminhe a situação à equipe responsável.",
+            "Um QR Code pode levar a um endereço enganoso. Confira o destino antes de continuar e não forneça credenciais em uma página inesperada. Confirme o documento pelo canal de trabalho conhecido.",
+        ],
+        "question": "Um QR Code em uma ordem de serviço abre um login inesperado. Como agir?",
+        "choices": [
+            "Digitar a senha para descobrir o conteúdo",
+            "Pedir que outro colega teste",
+            "Fechar a página e confirmar o documento pelo canal oficial",
+        ],
+        "answer": 2,
+        "feedback": "O QR Code não comprova a legitimidade do destino. A confirmação independente evita expor credenciais.",
+    },
+]
+
+SCENARIOS = [
+    {
+        "id": "email",
+        "title": "O e-mail dos 30 minutos",
+        "topic": "phishing",
+        "label": "Caixa de entrada",
+        "minutes": 3,
+        "icon": "mail",
+        "description": "Um aviso de bloqueio chegou. A próxima decisão é sua.",
+        "sender": "suporte@equatorlal-ajuda.example",
+        "subject": "Atualização obrigatória de acesso",
+        "message": "Prezado colaborador, seu acesso será bloqueado em 30 minutos. Confirme suas credenciais imediatamente para evitar a suspensão.",
+        "fake_link": "VERIFICAR ACESSO",
+        "choices": ["Clicar no link", "Ignorar a mensagem", "Reportar como suspeito"],
+        "answer": 2,
+        "feedback": [
+            "O clique foi apenas simulado. A pressão de 30 minutos, o domínio com letras trocadas e o pedido de credenciais são sinais de phishing.",
+            "Você evitou o clique. Reportar a suspeita também ajuda a proteger outras pessoas; apenas ignorar não aciona essa avaliação.",
+            "Boa decisão! Você percebeu os sinais e escolheu reportar. Confira domínio, urgência e pedido de credenciais antes de agir.",
+        ],
+        "branches": [
+            "Você abriu a página simulada, que agora solicita sua senha. O que faz?",
+            "Um colega recebeu a mesma mensagem e pergunta se pode abrir. Como você responde?",
+            "O reporte foi registrado nesta simulação. Como você acessa o serviço enquanto aguarda?",
+        ],
+        "followup_choices": [
+            [
+                "Fecho sem preencher e reporto o ocorrido",
+                "Preencho a senha",
+                "Envio o link para um colega testar",
+            ],
+            [
+                "Digo para clicar com cuidado",
+                "Oriento a não abrir e a reportar pelo canal oficial",
+                "Peço que encaminhe para todos",
+            ],
+            [
+                "Uso o link original",
+                "Respondo ao remetente pedindo confirmação",
+                "Uso um endereço conhecido, independente da mensagem",
+            ],
+        ],
+        "followup_answers": [0, 1, 2],
+        "followup_feedback": "Use um canal independente e conhecido. Se já interagiu com uma mensagem suspeita, relate o que aconteceu para receber orientação. Nesta simulação nada foi enviado ou acessado.",
+    },
+    {
+        "id": "ordem",
+        "title": "Uma ordem fora do combinado",
+        "topic": "social",
+        "label": "Operação em campo",
+        "minutes": 4,
+        "icon": "user",
+        "description": "Um suposto supervisor muda sua rota e solicita dados de clientes.",
+        "sender": "Supervisor • contato não verificado",
+        "subject": "Urgente: ajuste na ordem de serviço",
+        "message": "Preciso que você mude o destino da equipe agora. Envie a lista de clientes atendidos por este chat para eu atualizar a ordem. Não precisa confirmar com a central.",
+        "choices": [
+            "Enviar a lista para agilizar",
+            "Confirmar a ordem no canal oficial antes de agir",
+            "Enviar somente os telefones",
+        ],
+        "answer": 1,
+        "feedback": [
+            "A urgência não substitui a autorização. Enviar a lista a um contato não verificado expõe dados.",
+            "Boa decisão! Confirme a ordem em um sistema ou contato oficial já conhecido antes de alterar a atividade ou compartilhar dados.",
+            "Mesmo uma parte da lista pode expor dados. Confirme identidade, necessidade e autorização antes de compartilhar.",
+        ],
+        "branches": [
+            "Você percebe a exposição simulada. Qual é o próximo passo?",
+            "O contato insiste que confirmar vai atrasar a operação. E agora?",
+            "O contato pede mais dados para completar a lista. Como responder?",
+        ],
+        "followup_choices": [
+            [
+                "Apago o chat e esqueço",
+                "Comunico o ocorrido pelo fluxo oficial",
+                "Envio o restante",
+            ],
+            [
+                "Mantenho a verificação pelo canal conhecido",
+                "Faço uma exceção",
+                "Peço uma foto de crachá como única prova",
+            ],
+            [
+                "Envio o restante",
+                "Peço para ele prometer sigilo",
+                "Interrompo o envio e comunico a suspeita",
+            ],
+        ],
+        "followup_answers": [1, 0, 2],
+        "followup_feedback": "Pressão hierárquica e urgência são técnicas de engenharia social. Preserve a verificação independente e comunique qualquer compartilhamento indevido.",
+    },
+    {
+        "id": "qr",
+        "title": "O QR Code no documento",
+        "topic": "dispositivos",
+        "label": "Documento digital",
+        "minutes": 3,
+        "icon": "device",
+        "description": "Uma atualização de procedimento esconde um destino inesperado.",
+        "sender": "Documento recebido • origem não confirmada",
+        "subject": "Novo procedimento: leia o QR Code",
+        "message": "Para consultar a atualização, escaneie o código e entre com sua conta corporativa. Destino exibido: https://portal-atualizacao.example/acesso",
+        "fake_link": "QR CODE FICTÍCIO · SEM DESTINO",
+        "choices": [
+            "Entrar com a conta corporativa",
+            "Pedir a senha de um colega para testar",
+            "Confirmar a origem e o destino pelo canal conhecido",
+        ],
+        "answer": 2,
+        "feedback": [
+            "Uma página de login inesperada não deve receber sua senha. O domínio fictício deste exercício não comprova a origem do documento.",
+            "Compartilhar senhas amplia o risco e elimina a responsabilidade individual pelo acesso.",
+            "Boa decisão! Verificar a procedência e o destino evita que um QR Code se torne um atalho para a fraude.",
+        ],
+        "branches": [
+            "A página pede também um código de MFA. O que você faz?",
+            "O colega se oferece para fornecer um código temporário. E agora?",
+            "Você não conseguiu confirmar a origem do documento. Como prosseguir?",
+        ],
+        "followup_choices": [
+            [
+                "Envio o código",
+                "Fecho a página e reporto a interação",
+                "Aprovo a notificação",
+            ],
+            [
+                "Recuso e oriento a não compartilhar códigos",
+                "Aceito só desta vez",
+                "Salvo para usar depois",
+            ],
+            [
+                "Uso assim mesmo",
+                "Encaminho o QR Code sem contexto",
+                "Aguardo a confirmação oficial sem usar o acesso",
+            ],
+        ],
+        "followup_answers": [1, 0, 2],
+        "followup_feedback": "Nunca use senha ou MFA para testar um destino desconhecido. Interrompa a interação e procure o suporte por um contato já conhecido.",
+    },
+    {
+        "id": "suporte",
+        "title": "O suporte que sabe seu nome",
+        "topic": "senhas",
+        "label": "Desafio avançado",
+        "minutes": 4,
+        "icon": "key",
+        "advanced": True,
+        "description": "Desbloqueado ao concluir a lição de senhas e MFA.",
+        "sender": "Equipe técnica • identidade não verificada",
+        "subject": "Validação de segurança",
+        "message": "Olá! Sabemos sua área e precisamos validar sua conta. Aprove a notificação de acesso que enviamos. É uma ação do suporte.",
+        "choices": [
+            "Aprovar porque conhecem minha área",
+            "Recusar e confirmar pelo suporte conhecido",
+            "Enviar um código em vez de aprovar",
+        ],
+        "answer": 1,
+        "feedback": [
+            "Informações sobre você podem ser obtidas por outras fontes. Elas não validam a identidade do contato.",
+            "Boa decisão! Uma solicitação de MFA que você não iniciou deve ser recusada e verificada.",
+            "Enviar um código pode permitir o mesmo acesso indevido. Não compartilhe fatores de autenticação.",
+        ],
+        "branches": [
+            "O contato pede uma segunda aprovação. Como agir?",
+            "O contato ameaça bloquear sua conta. Como agir?",
+            "O contato pede outro código. Como agir?",
+        ],
+        "followup_choices": [
+            ["Aprovar", "Recusar e reportar", "Emprestar a conta"],
+            [
+                "Aprovar por medo",
+                "Enviar a senha",
+                "Manter a recusa e contatar o suporte oficial",
+            ],
+            ["Enviar", "Recusar e comunicar o ocorrido", "Pedir código a um colega"],
+        ],
+        "followup_answers": [1, 2, 1],
+        "followup_feedback": "Mantenha a recusa e confirme por um canal independente. Reconhecer a pressão é parte da proteção da sua conta.",
+    },
+]
+
+DIAGNOSTICS = {
+    "pre": [
+        {
+            "topic": "phishing",
+            "question": "Um e-mail pede sua senha com urgência. Qual é a melhor resposta?",
+            "choices": [
+                "Reportar e verificar por canal conhecido",
+                "Responder com a senha",
+                "Abrir o link primeiro",
+            ],
+            "answer": 0,
+        },
+        {
+            "topic": "senhas",
+            "question": "Um colega precisa do seu código MFA para uma tarefa. Você…",
+            "choices": [
+                "Compartilha por ser colega",
+                "Recusa e orienta a solicitar o acesso próprio",
+                "Compartilha só uma vez",
+            ],
+            "answer": 1,
+        },
+        {
+            "topic": "social",
+            "question": "Um contato novo muda sua ordem de serviço. Você…",
+            "choices": [
+                "Segue para ganhar tempo",
+                "Pede um áudio como única prova",
+                "Confirma em um canal oficial já conhecido",
+            ],
+            "answer": 2,
+        },
+    ],
+    "post": [
+        {
+            "topic": "phishing",
+            "question": "Um domínio parecido com o conhecido envia um link. O que fazer?",
+            "choices": [
+                "Confiar no logotipo",
+                "Verificar por canal independente e reportar a suspeita",
+                "Testar com a senha",
+            ],
+            "answer": 1,
+        },
+        {
+            "topic": "senhas",
+            "question": "Uma notificação MFA aparece sem você iniciar um acesso. Você…",
+            "choices": [
+                "Recusa e comunica ao suporte oficial",
+                "Aprova para encerrar",
+                "Pede ao colega para aprovar",
+            ],
+            "answer": 0,
+        },
+        {
+            "topic": "social",
+            "question": "Um suposto líder pede dados e proíbe a confirmação. Qual decisão é segura?",
+            "choices": [
+                "Enviar por hierarquia",
+                "Enviar apenas metade",
+                "Interromper o envio e confirmar pelo fluxo oficial",
+            ],
+            "answer": 2,
+        },
+    ],
+}
+
+FAQ = [
+    {
+        "keywords": ["phishing", "email", "e-mail", "link", "clic", "mensagem"],
+        "topic": "phishing",
+        "question": "Cliquei em um link suspeito. E agora?",
+        "answer": "Interrompa a interação e não forneça dados. Comunique o ocorrido pelo canal oficial da sua organização e siga as orientações da equipe responsável. Relate se houve preenchimento de dados ou download. Aqui, todos os cliques são apenas simulados.",
+    },
+    {
+        "keywords": ["senha", "mfa", "autentic", "codigo"],
+        "topic": "senhas",
+        "question": "Posso compartilhar um código de MFA?",
+        "answer": "Não compartilhe senhas nem códigos de autenticação. Recuse aprovações de acesso que você não iniciou e confirme a situação com o suporte por um contato conhecido. Cada pessoa deve ter o próprio acesso autorizado.",
+    },
+    {
+        "keywords": ["suporte", "ordem", "social", "supervisor"],
+        "topic": "social",
+        "question": "Como confirmar uma ordem de serviço?",
+        "answer": "Confira a solicitação no sistema ou canal oficial já conhecido. Não use apenas o telefone ou link enviado pelo próprio solicitante. Saber seu nome ou sua área não comprova identidade ou autorização.",
+    },
+    {
+        "keywords": ["dados", "vazamento", "arquivo", "cliente"],
+        "topic": "dados",
+        "question": "Enviei dados para a pessoa errada. O que faço?",
+        "answer": "Comunique prontamente pelo fluxo oficial de incidentes. Informe o que foi compartilhado e siga as orientações de contenção. Antes de novos envios, revise destinatários, permissões e necessidade de acesso.",
+    },
+    {
+        "keywords": ["qr", "pendrive", "dispositivo", "celular"],
+        "topic": "dispositivos",
+        "question": "É seguro usar um QR Code desconhecido?",
+        "answer": "Confira a origem e o destino antes de continuar. Não informe credenciais em um login inesperado. Não conecte mídias desconhecidas e procure orientação pelo canal oficial.",
+    },
+]

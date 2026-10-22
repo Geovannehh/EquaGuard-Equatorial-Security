@@ -1,0 +1,53 @@
+/* Camada de apresentação: menos superfícies, uma hierarquia por página. */
+:root { --line: #1b2d44; }
+.sidebar { padding-top: 48px; }
+.sidebar nav { margin-top: 36px; }
+.sidebar nav a { font-weight: 500; }
+.sidebar nav a.active { background: #f5c24212; border-color: transparent; }
+.brand > span { font-size: 22px; }
+.nav-divider { margin: 20px 10px; }
+.sidebar-bottom { opacity: .7; }
+.topbar { background: transparent; }
+.environment { display: none; }
+.page-heading { margin-bottom: 32px; }
+.page-heading h1 { font-size: 32px; }
+.page-heading p { font-size: 14px; margin-top: 8px; }
+.cards { display: grid; grid-template-columns: 1fr; gap: 0; }
+.content-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 32px;
+    padding: 26px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    box-shadow: none;
+}
+.content-card:hover { transform: none; border-color: var(--line); }
+.content-card .card-top { display: none; }
+.content-card .eyebrow { grid-column: 1; margin-bottom: 8px; font-size: 10px; letter-spacing: 1px; color: var(--muted); }
+.content-card h3 { grid-column: 1; margin-bottom: 8px; font-size: 20px; }
+.content-card > p:not(.eyebrow) { grid-column: 1; max-width: 65ch; margin-bottom: 8px; font-size: 13px; }
+.content-card .card-meta { grid-column: 1; margin: 0; }
+.content-card .button { grid-column: 2; grid-row: 1 / span 4; align-self: center; width: auto; margin: 0; background: transparent; }
+.mission-link { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px; margin-bottom: 32px; background: #101c2b; border-radius: 12px; }
+.mission-link strong { display: block; font-size: 18px; font-family: var(--font-heading); }
+.mission-link small { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
+.mission-link:hover { background: #1b2d44; }
+.practice-note { font-size: 12px; color: var(--muted); margin: 24px 0 8px; }
+.notice { background: transparent; border: 0; border-left: 2px solid var(--line); border-radius: 0; padding: 8px 16px; }
+.stat { background: transparent; border-color: var(--line); box-shadow: none; }
+.stat > .icon { display: none; }
+.chip { background: transparent; border-color: transparent; }
+.toolbar { margin-bottom: 12px; }
+@media (max-width:850px) {
+    .sidebar { padding: 16px 20px; }
+    .sidebar nav { margin-top: 15px; }
+    .page-heading h1 { font-size: 27px; }
+}
+@media (max-width:600px) {
+    .content-card { grid-template-columns: 1fr; padding: 24px 0; }
+    .content-card .button { grid-column: 1; grid-row: auto; justify-self: start; margin-top: 16px; }
+    .mission-link { padding: 20px; }
+}
